@@ -12,7 +12,7 @@ module.exports = class User extends Sequelize.Model {
         email: {
           type: Sequelize.STRING(256),
           allowNull: false,
-          unique: true,
+          unique: 'column',
         },
         password: {
           type: Sequelize.STRING(100),
@@ -24,6 +24,10 @@ module.exports = class User extends Sequelize.Model {
         },
         hash: {
           type: Sequelize.STRING(15),
+          allowNull: false,
+        },
+        pose: {
+          type: Sequelize.STRING(50),
           allowNull: false,
         },
       },
@@ -38,5 +42,11 @@ module.exports = class User extends Sequelize.Model {
         collate: 'utf8_general_ci',
       }
     );
+  }
+
+  static associate(db) {
+    db.User.belongsToMany(db.Group, {
+      through: 'UserGroups',
+    });
   }
 };

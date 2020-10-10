@@ -1,11 +1,10 @@
 'use strict';
 
 const User = require('./user');
+const Group = require('./group');
+const UserGroup = require('./user_group');
 
-const fs = require('fs');
-const path = require('path');
 const Sequelize = require('sequelize');
-const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.js')[env];
 const db = {};
@@ -25,7 +24,19 @@ if (config.use_env_variable) {
 db.sequelize = sequelize;
 
 db.User = User;
+db.Group = Group;
+db.UserGroup = UserGroup;
 
 User.init(sequelize);
+Group.init(sequelize);
+UserGroup.init(sequelize);
+
+Object.keys(db).forEach((modelName) => {
+  if ('associate' in db[modelName]) {
+    db[modelName].associate(db);
+  }
+
+  db[modelName].sync();
+});
 
 module.exports = db;
