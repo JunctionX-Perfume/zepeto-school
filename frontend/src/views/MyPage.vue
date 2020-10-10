@@ -1,14 +1,18 @@
 <template>
   <div>
-    <p>mypage</p>
+    <GridPostings/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'MyPage'
-}
+import GridPostings from '../components/GridPostings.vue'
 
+export default {
+  name: 'MyPage',
+  components: {
+    GridPostings
+  }
+}
 </script>
 
 <style>
