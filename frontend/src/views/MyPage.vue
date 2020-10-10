@@ -36,7 +36,6 @@ export default {
     MyPosts
   }
 }
-
 </script>
 
 <style scoped>

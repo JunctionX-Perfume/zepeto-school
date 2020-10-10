@@ -942,6 +942,7 @@
     vue-property-decorator "^8.1.0"
 
 "@egjs/vue-infinitegrid@3.0.3":
+
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@egjs/vue-infinitegrid/-/vue-infinitegrid-3.0.3.tgz#1e2103af992042ba1fdb59c989aa586952f54f9f"
   integrity sha512-XcphcNR2h3oPRGVn0Iol3q+EUM6Y5gkE1OyIjYiFmR6roxVW8RdcpqWu3wKD2uNjcgR0gJFebIbSLecZ3BvuMg==
