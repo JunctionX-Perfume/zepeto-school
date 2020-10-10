@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import MyPage from '../views/MyPage.vue'
+import GroupPage from '../views/GroupPage.vue'
 
 Vue.use(VueRouter)
 
@@ -12,6 +13,11 @@ const routes = [
     path: '/mypage',
     name: 'MyPage',
     component: MyPage
+  },
+  {
+    path: '/grouppage',
+    name: 'GroupPage',
+    component: GroupPage
   },
   {
     path: '/login',

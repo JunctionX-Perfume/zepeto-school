@@ -861,6 +861,95 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@egjs/agent@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@egjs/agent/-/agent-2.2.1.tgz#fb144cc7183a5bb79c2fceeefb4a7b2826e9766f"
+  integrity sha512-SxrZbkYY/tdOmTLvuN/Jm5y/BgVw9l7H/jcdkI7DxO3Dv/6YFU20y+GYBGv+4rZTtmUs4luDucfHrU44IwWDOw==
+
+"@egjs/axes@^2.7.0":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@egjs/axes/-/axes-2.7.1.tgz#122b3bd4b5f5a7104163d672fe4e00f780fe82bf"
+  integrity sha512-QdtRWGgL/+WPquqsKlZP2ArQAfJytZhieqlAhTsTcnRsyv/crTeZZOJNjH436ocYlR5AJ9+8cbR3up+nESlmQQ==
+  dependencies:
+    "@egjs/agent" "^2.2.1"
+    "@egjs/component" "^2.1.2"
+    "@egjs/hammerjs" "^2.0.15"
+
+"@egjs/children-differ@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@egjs/children-differ/-/children-differ-1.0.1.tgz#5465fa80671d5ca3564ebe912f48b05b3e8a14fd"
+  integrity sha512-DRvyqMf+CPCOzAopQKHtW+X8iN6Hy6SFol+/7zCUiE5y4P/OB8JP8FtU4NxtZwtafvSL4faD5KoQYPj3JHzPFQ==
+  dependencies:
+    "@egjs/list-differ" "^1.0.0"
+
+"@egjs/component@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@egjs/component/-/component-2.1.2.tgz#c466a0a6fc6ba2d479814dcbe6ee4643c25a2e5b"
+  integrity sha512-7tnPiqxbSZ0porzlm0+/O3qZdanMj0zOq0sb17wQXuaRG49XKKKJaO+SacGnZDqf308N5hzJ0m9fZ4+j+VBvXA==
+
+"@egjs/flicking@^3.5.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@egjs/flicking/-/flicking-3.5.1.tgz#1b300bdb473b9bc17776904bc7a46f8cec95e3e0"
+  integrity sha512-YrXX/CPSK0D8nRsRtLPZ7LN6/iYpjClpQYJwHwlY7kf3KYf1R4nJUyLOTNhZRds/DY5ZEP82MxJ/hD2ikrV8eQ==
+  dependencies:
+    "@egjs/axes" "^2.7.0"
+    "@egjs/component" "^2.1.2"
+    "@egjs/list-differ" "^1.0.0"
+
+"@egjs/hammerjs@^2.0.15":
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
+  integrity sha512-XQsZgjm2EcVUiZQf11UBJQfmZeEmOW8DpI1gsFeln6w0ae0ii4dMQEQ0kjl6DspdWX1aGY1/loyXnP0JS06e/A==
+  dependencies:
+    "@types/hammerjs" "^2.0.36"
+
+"@egjs/infinitegrid@^3.6.3":
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/@egjs/infinitegrid/-/infinitegrid-3.6.3.tgz#f12f60b4d7d983a6cc0371735df69991101618cc"
+  integrity sha512-GELg3eeOjIvk6DkUB61sab2eyV8yJHB2npR7mHmp0rjGf3nJoEBR6A1FqjIrAtT+NjseBxTP2EqYRyI9CwhrIA==
+  dependencies:
+    "@egjs/component" "^2.1.2"
+    "@egjs/lazyloaded" "0.0.2"
+    "@egjs/list-differ" "^1.0.0"
+
+"@egjs/lazyloaded@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@egjs/lazyloaded/-/lazyloaded-0.0.2.tgz#1658a2188239e1c5e9dee71734830bcca6625388"
+  integrity sha512-UWgJCDHxsEP/sF+ztwl8F79rP1RHmlwG5ur0fFUT6RgaqKN6aQTnuYm9G/MQB48mWpw/tsY80Ha7xhvhryl+FA==
+  dependencies:
+    "@egjs/component" "^2.1.2"
+
+"@egjs/list-differ@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@egjs/list-differ/-/list-differ-1.0.0.tgz#2277aff52e3e4bd9318d5c30ffc3ba3b6216f05e"
+  integrity sha512-HsbMKc0ZAQH+EUeCmI/2PvTYSybmkaWwakU8QGDYYgMVIg9BQ5sM0A0Nnombjxo2+JzXHxmH+jw//yGX+y6GYw==
+
+"@egjs/vue-children-differ@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@egjs/vue-children-differ/-/vue-children-differ-1.0.1.tgz#57f5ac960c279867f46911feafa6951e0e1d58f2"
+  integrity sha512-UPwMPoPaqGMjBGM8zoxvFyhIc8/Kqj3kkxYfPx6jRn0nnIZ/yfI4OHjPpU8FidnvvhVRUzrJfKeMX8DAsJCz7Q==
+  dependencies:
+    "@egjs/children-differ" "^1.0.1"
+
+"@egjs/vue-flicking@3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@egjs/vue-flicking/-/vue-flicking-3.3.1.tgz#8c7aca9dec5bf737a28736e7ac36310516bdff67"
+  integrity sha512-3pNUYA2eAQlWoIicxFKDW9AVuHAmhbvwKK1QjJH/pvBpijwa+MtpnCzJCEevauwev9dHDeilPY52/egGTdcgLQ==
+  dependencies:
+    "@egjs/flicking" "^3.5.1"
+    "@egjs/list-differ" "^1.0.0"
+    "@egjs/vue-children-differ" "^1.0.0"
+    vue-property-decorator "^8.1.0"
+
+"@egjs/vue-infinitegrid@3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@egjs/vue-infinitegrid/-/vue-infinitegrid-3.0.3.tgz#1e2103af992042ba1fdb59c989aa586952f54f9f"
+  integrity sha512-XcphcNR2h3oPRGVn0Iol3q+EUM6Y5gkE1OyIjYiFmR6roxVW8RdcpqWu3wKD2uNjcgR0gJFebIbSLecZ3BvuMg==
+  dependencies:
+    "@egjs/infinitegrid" "^3.6.3"
+    "@egjs/list-differ" "^1.0.0"
+    vue-property-decorator "^8.3.0"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npm.taobao.org/@hapi/address/download/@hapi/address-2.1.4.tgz?cache=0&sync_timestamp=1593993857635&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40hapi%2Faddress%2Fdownload%2F%40hapi%2Faddress-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -983,6 +1072,11 @@
   dependencies:
     "@types/minimatch" "*"
     "@types/node" "*"
+
+"@types/hammerjs@^2.0.36":
+  version "2.0.36"
+  resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.36.tgz#17ce0a235e9ffbcdcdf5095646b374c2bf615a4c"
+  integrity sha512-7TUK/k2/QGpEAv/BCwSHlYu3NXZhQ9ZwBYpzr9tjlPIL2C5BeGhH3DmVavRx3ZNyELX5TLC91JTz/cen6AAtIQ==
 
 "@types/http-proxy-middleware@*":
   version "0.19.3"
@@ -8834,6 +8928,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
+vue-class-component@^7.1.0:
+  version "7.2.6"
+  resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-7.2.6.tgz#8471e037b8e4762f5a464686e19e5afc708502e4"
+  integrity sha512-+eaQXVrAm/LldalI272PpDe3+i4mPis0ORiMYxF6Ae4hyuCh15W8Idet7wPUEs4N4YptgFHGys4UrgNQOMyO6w==
+
 vue-cli-plugin-vuetify@~2.0.7:
   version "2.0.7"
   resolved "https://registry.npm.taobao.org/vue-cli-plugin-vuetify/download/vue-cli-plugin-vuetify-2.0.7.tgz#fcb4f1655e7c9199ee40dcbf6465e2355fd074d5"
@@ -8879,6 +8978,13 @@ vue-loader@^15.9.2:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-property-decorator@^8.1.0, vue-property-decorator@^8.3.0:
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-8.5.1.tgz#571a91cf8d2b507f537d79bf8275af3184572fff"
+  integrity sha512-O6OUN2OMsYTGPvgFtXeBU3jPnX5ffQ9V4I1WfxFQ6dqz6cOUbR3Usou7kgFpfiXDvV7dJQSFcJ5yUPgOtPPm1Q==
+  dependencies:
+    vue-class-component "^7.1.0"
 
 vue-router@^3.2.0:
   version "3.4.6"

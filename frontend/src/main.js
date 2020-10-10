@@ -4,6 +4,11 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 import vuetify from './plugins/vuetify'
+import VueInfiniteGrid from '@egjs/vue-infinitegrid'
+import VueFlicking from '@egjs/vue-flicking'
+
+Vue.use(VueInfiniteGrid)
+Vue.use(VueFlicking)
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios

@@ -1,5 +1,5 @@
 <template>
-  <v-layout row class="nav-bar">
+  <v-layout row class="nav-bar mx-0">
     <NavBtn v-for="(btn, idx) in btns" :key="idx" v-bind="btn" />
   </v-layout>
 </template>
@@ -24,6 +24,8 @@ export default {
 <style scoped>
 .nav-bar {
   height: 30px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .v-btn {

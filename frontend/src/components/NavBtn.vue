@@ -1,6 +1,10 @@
 <template>
   <div class="btn" :href="path">
-    <span>{{ name }}</span>
+    <span>
+      <a :href="path">
+        {{ name }}
+      </a>
+    </span>
   </div>
 </template>
 
