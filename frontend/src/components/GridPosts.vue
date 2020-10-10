@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import Posting from './Posting'
+import Post from './Post'
 
 export default {
-  name: 'GridPostings',
+  name: 'GridPosts',
   components: {
     Posting
   },
