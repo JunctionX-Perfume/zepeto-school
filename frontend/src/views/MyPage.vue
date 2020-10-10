@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import GridPostings from '../components/GridPostings.vue'
+import GridPosts from '../components/GridPosts.vue'
 
 export default {
   name: 'MyPage',
