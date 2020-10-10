@@ -30,6 +30,10 @@ module.exports = class User extends Sequelize.Model {
           type: Sequelize.STRING(50),
           allowNull: false,
         },
+        msg: {
+          type: Sequelize.STRING(100),
+          allowNull: false,
+        },
       },
       {
         sequelize,
@@ -48,5 +52,7 @@ module.exports = class User extends Sequelize.Model {
     db.User.belongsToMany(db.Group, {
       through: 'UserGroups',
     });
+    db.User.hasMany(db.Post, { foreignKey: 'writerId', sourceKey: 'id' });
+    db.User.hasMany(db.Comment, { foreignKey: 'uid', sourceKey: 'id' });
   }
 };

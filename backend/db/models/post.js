@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-module.exports = class Group extends Sequelize.Model {
+module.exports = class Post extends Sequelize.Model {
   static init(sequelize) {
     return super.init(
       {
@@ -8,20 +8,18 @@ module.exports = class Group extends Sequelize.Model {
           type: Sequelize.INTEGER,
           autoIncrement: true,
           primaryKey: true,
-          unique: true,
         },
-        name: {
-          type: Sequelize.STRING(20),
+        content: {
+          type: Sequelize.BLOB('medium'),
           allowNull: false,
-          uniqe: true,
         },
       },
       {
         sequelize,
         timestamps: true,
         underscored: false,
-        modelName: 'Group',
-        tableName: 'groups',
+        modelName: 'Post',
+        tableName: 'posts',
         paranoid: true,
         charset: 'utf8',
         collate: 'utf8_general_ci',
@@ -30,7 +28,8 @@ module.exports = class Group extends Sequelize.Model {
   }
 
   static associate(db) {
-    db.Group.belongsToMany(db.User, { through: 'UserGroups' });
-    db.Group.belongsToMany(db.Post, { through: 'GroupPosts' });
+    db.Post.belongsTo(db.User, { foreignKey: 'writerId', targetKey: 'id' });
+    db.Post.belongsToMany(db.Group, { through: 'GroupPosts' });
+    db.Post.hasMany(db.Comment, { foreignKey: 'pid', sourceKey: 'id' });
   }
 };
