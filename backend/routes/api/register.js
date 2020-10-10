@@ -15,6 +15,8 @@ router.post('/', async (req, res, next) => {
       password: req.body.password,
       name: req.body.name,
       hash: req.body.hash,
+      pose: 'PHOTOBOOTH_ONE_1',
+      msg: 'Hello, ZEPETO!',
     });
 
     return res.status(200).json({ message: '회원가입이 완료되었습니다.' });
