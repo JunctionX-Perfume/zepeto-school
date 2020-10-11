@@ -1,8 +1,7 @@
 <template>
   <div>
-
     <v-row class="text-center" align-content="center">
-      <v-avatar size="110" class="mx-auto">
+      <v-avatar size="110">
         <img
           :src="url"
           :alt="name"
@@ -34,5 +33,11 @@ export default {
 <style scoped>
 .img {
   display: block;
+}
+.v-avatar {
+  margin: auto;
+}
+.row {
+  margin-bottom: 20px;
 }
 </style>

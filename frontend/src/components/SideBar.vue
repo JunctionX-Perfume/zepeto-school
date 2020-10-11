@@ -5,8 +5,10 @@
     <v-col v-if="isMyPage">
     <!-- <div v-if="isMyPage" class="side-bar-row"> -->
       <ProgressView :progresses="progresses"/>
-      <v-btn> Write New Post</v-btn>
-      <v-btn> Manage Profile</v-btn>
+      <div class="btns">
+        <button style="background-color: #FFCBF2; margin-top: 20px;">New Post</button>
+        <button style="background-color: #DEAAFF">Manage Profile</button>
+      </div>
     <!-- </div> -->
     </v-col>
     <v-row v-else-if="isGroupPage">
@@ -55,11 +57,31 @@ export default {
 
 <style>
 .side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
   height: 100vh;
   /* border-right: 1px black solid; */
 }
 
 .side-bar-row {
   display: flex;
+}
+
+button {
+  /* max-width: 20%; */
+  width: 10vw;
+  font-size: 1em;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.btns{
+  display: flex-flow;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 </style>
