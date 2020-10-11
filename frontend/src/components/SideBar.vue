@@ -13,13 +13,37 @@
     </v-col>
     <v-row v-else-if="isGroupPage">
     <!-- <div v-else-if="isGroupPage" class="side-bar-row"> -->
-      <div>
-        <span>
-          <h2>Group Mission</h2>
-        </span>
-        <span>
-          +
-        </span>
+      <div class="group__sidebar">
+        <div class="group__sidebar__header">
+          <div class="group__sidebar__header__letter">
+            Group Mission
+          </div>
+          <div class="group__sidebar__header__icon">
+            <img src="../assets/add-24px.svg"/>
+          </div>
+        </div>
+        <div class="group__sidebar__content">
+          <div class="group__sidebar__content__quest">
+            <input type="checkbox" name="xxx" value="yyy" checked>
+            <div class="group__sidebar__content__quest_letter">오늘의 퀘스트</div>
+            <div class="group__sidebar__content__quest_letter"> 3 / 5</div>
+          </div>
+          <div class="group__sidebar__content__quest">
+            <input type="checkbox" name="xxx" value="yyy" checked>
+            <div class="group__sidebar__content__quest_letter">오늘의 퀘스트</div>
+            <div class="group__sidebar__content__quest_letter"> 2 / 5</div>
+          </div>
+          <div class="group__sidebar__content__quest">
+            <input type="checkbox" name="xxx" value="yyy">
+            <div class="group__sidebar__content__quest_letter">오늘의 퀘스트</div>
+            <div class="group__sidebar__content__quest_letter"> 1 / 5</div>
+          </div>
+          <div class="group__sidebar__content__quest">
+            <input type="checkbox" name="xxx" value="yyy" checked>
+            <div class="group__sidebar__content__quest_letter">오늘의 퀘스트</div>
+            <div class="group__sidebar__content__quest_letter"> 4 / 5</div>
+          </div>
+        </div>
       </div>
       <v-container>
       </v-container>
@@ -55,7 +79,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .side-bar {
   display: flex;
   flex-direction: column;
@@ -83,5 +107,48 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.group__sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.group__sidebar__header {
+  box-sizing: border-box;
+  margin-top: 20px;
+  display: flex;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.group__sidebar__header__letter {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.group__sidebar__header__icon {
+  cursor: pointer;
+}
+.group__sidebar__content {
+  width: 11vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(219, 219, 219);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgb(201, 201, 201);
+}
+.group__sidebar__content__quest{
+  box-sizing: border-box;
+  background-color: white;
+  font-size: 0.8em;
+  padding: 0.5vw;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>
