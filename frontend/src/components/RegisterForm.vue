@@ -2,18 +2,15 @@
   <v-sheet elevation="90" class="d-flex">
     <v-card flat width="420" class="login-card px-4">
       <v-card-title primary-title>
-        <h4>Login</h4>
+        <h4>Register</h4>
       </v-card-title>
       <v-form>
-        <v-text-field v-model="email" name="Username" label="Username"></v-text-field>
+        <v-text-field v-model="name" name="Name" label="Name"></v-text-field>
+        <v-text-field v-model="email" name="Email" label="Email"></v-text-field>
+        <v-text-field v-model="hash" name="Hash" label="Hash"></v-text-field>
         <v-text-field v-model="password" name="Password" label="Password" type="password"></v-text-field>
         <v-card-actions class="card-actions d-flex justify-space-around">
-          <v-btn>
-            <router-link to="/login/register">
-              Register
-            </router-link>
-          </v-btn>
-          <v-btn @click="login">Login</v-btn>
+          <v-btn @click="register">Register</v-btn>
         </v-card-actions>
       </v-form>
     </v-card>
@@ -21,41 +18,35 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
-  name: 'LoginForm',
+  name: 'RegisterForm',
   data: () => ({
+    name: '',
     email: '',
+    hash: '',
     password: ''
   }),
   methods: {
-    login () {
+    register () {
       console.log(this.email)
       console.log(this.password)
-      this.$store.dispatch('tryLogin', {
+      this.$http.post('http://172.17.10.137:3000/api/register', {
         email: this.email,
-        password: this.password
+        password: this.password,
+        name: this.name,
+        hash: this.hash
       })
         .then(res => {
-          if (res) {
+          if (res.status === 200) {
+            alert(res.data.message)
             console.log('success!')
+            this.$router.push('/login')
           } else {
             console.log('failed!')
+            alert(res.data.message)
             this.password = ''
           }
         })
-    }
-  },
-  computed: {
-    ...mapGetters(['getIsLogin'])
-  },
-  watch: {
-    getIsLogin (newVal) {
-      if (newVal) {
-        console.log('Login succeeded')
-        this.$router.push('/mypage')
-      }
     }
   }
 }

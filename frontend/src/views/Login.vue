@@ -9,18 +9,26 @@
         </filter>
       </svg>
 
-      <LoginForm />
+      <LoginForm v-if="isLoginPage"/>
+      <RegisterForm v-else/>
 
   </v-container>
 </template>
 
 <script>
 import LoginForm from '@/components/LoginForm'
+import RegisterForm from '@/components/RegisterForm'
 
 export default {
   name: 'Login',
   components: {
-    LoginForm
+    LoginForm,
+    RegisterForm
+  },
+  computed: {
+    isLoginPage () {
+      return this.$route.params.type !== 'register'
+    }
   }
 }
 </script>
