@@ -70,6 +70,7 @@ export default {
   margin-top: 10px;
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 1.2em;
 }
 .mypage__quests {
   padding: 5px;
