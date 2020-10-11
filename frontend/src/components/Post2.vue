@@ -1,9 +1,7 @@
 <template>
 <section class="post">
-  <div>
-      <img src='../assets/post.svg'/>
-      <div>JunctionX 2020 Seoul</div>
-  </div>
+  <img src='../assets/post.svg'/>
+  <div class="post__doc">JunctionX 2020 Seoul</div>
 </section>
 </template>
 
@@ -15,4 +13,12 @@ export default {
 </script>
 
 <style scoped>
+.post {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.post__doc {
+    margin-top: 10px;
+}
 </style>
