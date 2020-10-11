@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container class="blank">
     <h2>Progress</h2>
     <v-progress-linear
       v-for="(progress, idx) in progresses"
@@ -11,7 +11,7 @@
     >
       <strong> {{ Math.ceil(progress.value) }} %</strong>
     </v-progress-linear>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -27,3 +27,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+h2 {
+  margin-top: 100px;
+}
+</style>
