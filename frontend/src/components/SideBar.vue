@@ -81,6 +81,7 @@ export default {
 
 <style scoped>
 .side-bar {
+  border-right: 0.5px solid rgb(206, 206, 206);
   display: flex;
   flex-direction: column;
   justify-self: center;
