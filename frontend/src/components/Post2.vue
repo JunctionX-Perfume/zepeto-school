@@ -18,9 +18,15 @@ export default {
 
 <style scoped>
 .post {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 15px;
+    padding: 25px 20px;
 }
 .post__img {
     box-shadow: 0.5px 1px 1px rgb(138, 138, 138);
