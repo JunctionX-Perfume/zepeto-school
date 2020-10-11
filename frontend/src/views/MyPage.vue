@@ -2,25 +2,22 @@
 <section class="mypage">
   <section class="mypage__quests">
     <section class="quests__personal">
-      <div class="quest__header__personal">개인 퀘스트</div>
+      <div class="quest__header__personal">Personal</div>
       <div class="quest__header__items__personal">
         <Quests/>
       </div>
     </section>
 
-    <section class="quests__group">
-      <div class="quest__header__group">그룹 퀘스트</div>
+    <section class="quests__groups">
+      <div class="quest__header__group">Group</div>
       <div class="quest__header__items__group">
-        <Quests></Quests>
-        <Quests></Quests>
-        <Quests></Quests>
-        <Quests></Quests>
+        <Quests v-for="(title, idx) in titles" :key="idx" v-bind="title" />
       </div>
     </section>
   </section>
   <section class="myposting">
     <div class="myposting__header">
-      <div class="myposting__haeder__doc">나의 포스팅</div>
+      <div class="myposting__haeder__doc">My Posts</div>
       <div class="myposting__header__add">
         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       </div>
@@ -58,7 +55,15 @@ export default {
   components: {
     Quests,
     Post2
-  }
+  },
+  data: () => ({
+    titles: [
+      { title: 'CS Study' },
+      { title: 'Film Club' },
+      { title: 'Book Club' },
+      { title: 'Exercise' }
+    ]
+  })
 }
 
 </script>
@@ -103,5 +108,10 @@ export default {
   flex-wrap: wrap;
   margin: 10px;
   overflow-y: scroll;
+}
+.quest__group__title {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 </style>
