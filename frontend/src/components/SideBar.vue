@@ -2,12 +2,15 @@
   <v-container class="side-bar pa-0">
     <h1> {{ title }} </h1>
     <Profile v-bind="user"/>
-    <v-row v-if="isMyPage">
+    <v-col v-if="isMyPage">
+    <!-- <div v-if="isMyPage" class="side-bar-row"> -->
       <ProgressView :progresses="progresses"/>
       <v-btn> Write New Post</v-btn>
       <v-btn> Manage Profile</v-btn>
-    </v-row>
+    <!-- </div> -->
+    </v-col>
     <v-row v-else-if="isGroupPage">
+    <!-- <div v-else-if="isGroupPage" class="side-bar-row"> -->
       <div>
         <span>
           <h2>Group Mission</h2>
@@ -19,6 +22,7 @@
       <v-container>
       </v-container>
     </v-row>
+    <!-- </div> -->
 
   </v-container>
 </template>
@@ -51,6 +55,11 @@ export default {
 
 <style>
 .side-bar {
-  border-right: 1px black solid;
+  height: 100vh;
+  /* border-right: 1px black solid; */
+}
+
+.side-bar-row {
+  display: flex;
 }
 </style>

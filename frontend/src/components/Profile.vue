@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="space-around">
+  <div>
 
     <v-row class="text-center" align-content="center">
       <v-avatar size="110" class="mx-auto">
@@ -12,7 +12,7 @@
 
     <h2>{{ name }}</h2>
     <p>{{ msg }}</p>
-  </v-row>
+  </div>
 </template>
 
 <script>
