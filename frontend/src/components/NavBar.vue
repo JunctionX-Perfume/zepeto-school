@@ -14,7 +14,7 @@ export default {
   },
   data: () => ({
     btns: [
-      { name: 'Current Group' },
+      { name: 'Group List' },
       { name: 'My Page', path: '/mypage' },
       { name: 'Group Page', path: '/grouppage' },
       { name: 'logout' }

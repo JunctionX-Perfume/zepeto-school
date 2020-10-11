@@ -11,7 +11,7 @@
     <section class="quests__groups">
       <div class="quest__header__group">Group</div>
       <div class="quest__header__items__group">
-        <Quests v-for="(title, idx) in titles" :key="idx" v-bind="title" />
+        <Quests v-for="(obj, idx) in objs" :key="idx" v-bind="obj" />
       </div>
     </section>
   </section>
@@ -57,11 +57,11 @@ export default {
     Post2
   },
   data: () => ({
-    titles: [
-      { title: 'CS Study' },
-      { title: 'Film Club' },
-      { title: 'Book Club' },
-      { title: 'Exercise' }
+    objs: [
+      { title: 'CS Study', color: '#D0D1FE' },
+      { title: 'Film Club', color: '#C8E7FF' },
+      { title: 'Book Club', color: '#C1FCFF' },
+      { title: 'Exercise', color: '#F2F2F2' }
     ]
   })
 }
@@ -82,6 +82,16 @@ export default {
   display: flex;
   overflow-x: scroll;
   white-space:nowrap;
+}
+.mypage__quests::-webkit-scrollbar {
+  height: 5px;
+}
+.mypage__quests::-webkit-scrollbar-track {
+  background-color: white;
+}
+.mypage__quests::-webkit-scrollbar-thumb {
+  background-color: #849fda;
+  border-radius: 10px;
 }
 .quest__header__items__group {
   display:flex;
@@ -108,6 +118,15 @@ export default {
   flex-wrap: wrap;
   margin: 10px;
   overflow-y: scroll;
+}
+.myposting__items::-webkit-scrollbar {
+  width: 5px;
+}
+.myposting__items::-webkit-scrollbar-track {
+  background-color: white;
+}
+.myposting__items::-webkit-scrollbar-thumb {
+  background-color: #D8BBFE;
 }
 .quest__group__title {
   margin-left: 10px;

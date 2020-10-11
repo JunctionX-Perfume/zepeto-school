@@ -1,5 +1,5 @@
 <template>
-  <div class="quests">
+  <div class="quests" :style="`{ background: ${color} }`">
     <div class="quests__title">{{ title }}</div>
     <Quest v-for="(content, idx) in contents" :key="idx" v-bind="content" />
   </div>
@@ -14,7 +14,8 @@ export default {
     Quest
   },
   props: {
-    title: String
+    title: String,
+    color: String
   },
   data: () => ({
     contents: [
@@ -24,7 +25,10 @@ export default {
       { content: '오늘의 퀘스트' },
       { content: '오늘의 퀘스트' }
     ]
-  })
+  }),
+  mounted () {
+    this.$el.style.background = this.color
+  }
 }
 </script>
 
@@ -38,8 +42,18 @@ export default {
   padding: 10px;
   margin-left: 5px;
   margin-right: 20px;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow-y: scroll;
+}
+.quests::-webkit-scrollbar {
+  width: 5px;
+}
+.quests::-webkit-scrollbar-track {
+  background-color: white;
+}
+.quests::-webkit-scrollbar-thumb {
+  background-color: #849fda;
+  border-radius: 10px;
 }
 .quests__title{
   margin-left: 5px;
