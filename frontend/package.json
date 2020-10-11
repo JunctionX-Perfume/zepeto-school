@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "meez",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,8 @@
     "@egjs/vue-infinitegrid": "3.0.3",
     "axios": "0.20.0",
     "core-js": "^3.6.5",
+    "tiptap": "1.30.0",
+    "tiptap-extensions": "1.33.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuetify": "^2.2.11",

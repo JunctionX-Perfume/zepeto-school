@@ -1,8 +1,7 @@
 <template>
   <div class="editor">
     <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
-      <div class="menubar">
-
+      <div v-if="false" class="menubar">
         <button
           class="menubar__button"
           :class="{ 'is-active': isActive.bold() }"
@@ -136,7 +135,7 @@
 </template>
 
 <script>
-// import Icon from 'Components/Icon'
+import Icon from '@/components/Icon.vue'
 import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
 import {
   Blockquote,
@@ -161,7 +160,8 @@ import {
 export default {
   components: {
     EditorContent,
-    EditorMenuBar
+    EditorMenuBar,
+    Icon
   },
   data () {
     return {

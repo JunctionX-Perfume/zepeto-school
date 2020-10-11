@@ -51,6 +51,6 @@ export default {
 
 <style>
 .side-bar {
-  border-right: 1px black solid;
+  height: 100vh;
 }
 </style>

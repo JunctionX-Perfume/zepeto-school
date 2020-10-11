@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-card elevation="2" outlined shaped>
+    <v-card v-if="false" elevation="2" outlined shaped>
         <v-text class="card" v-html="html"></v-text>
     </v-card>
     <PostEditor/>
@@ -19,14 +19,12 @@ export default {
     PostEditor
   },
   mounted () {
-    const img = this.img
-    console.log(img)
   }
 }
 </script>
 
 <style lang="postcss" scoped>
 .card {
-    border-radius: 16px;
+    border-radius: 24px;
 }
 </style>
