@@ -3,12 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var apiRouter = require('./routes/api.js');
 var sequelize = require('./db/models/index').sequelize;
 
 var app = express();
+app.use(cors());
 sequelize.sync({ alter: true });
 
 // view engine setup

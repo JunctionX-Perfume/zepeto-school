@@ -14,8 +14,10 @@ export default {
   },
   data: () => ({
     btns: [
+      { name: 'Group List' },
       { name: 'My Page', path: '/mypage' },
-      { name: 'Group Page', path: '/grouppage' }
+      { name: 'Group Page', path: '/grouppage' },
+      { name: 'logout' }
     ]
   })
 }
@@ -23,9 +25,13 @@ export default {
 
 <style scoped>
 .nav-bar {
-  height: 30px;
-  margin-left: 0;
-  margin-right: 0;
+  height: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 0px;
+  display:flex;
+  justify-content: space-between;
+  background-color: #e3f1fc;
 }
 
 .v-btn {
