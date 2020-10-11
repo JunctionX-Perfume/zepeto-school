@@ -1,7 +1,9 @@
 <template>
   <div>
-    <v-card rounded elevation="3" class="feed-post">
-      <Post v-for="(post, idx) in feeds" :key="idx" :post="post"/>
+    <v-card v-for="(post, idx) in feeds" :key="idx" rounded elevation="3" class="feed-post">
+      <v-container>
+        <Post :post="post"/>
+      </v-container>
     </v-card>
   </div>
 </template>
@@ -24,5 +26,7 @@ export default {
 .feed-post {
   width: 100%;
   margin-bottom: 20px;
+  padding: 15px;
+  padding-top: 5px;
 }
 </style>

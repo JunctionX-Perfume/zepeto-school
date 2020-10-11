@@ -1,9 +1,9 @@
 <template>
   <v-row>
-    <v-card v-if="false" elevation="2" outlined shaped>
-        <v-text class="card" v-html="html"></v-text>
+    <v-card class="post-card" v-if="true" elevation="2" shaped>
+        <v-text class="text-card" v-html="post"></v-text>
     </v-card>
-    <PostEditor/>
+    <PostEditor v-else :html="post"/>
   </v-row>
 </template>
 
@@ -13,7 +13,7 @@ import PostEditor from './PostEditor.vue'
 export default {
   name: 'Posting',
   props: {
-    html: String
+    post: String
   },
   components: {
     PostEditor
@@ -23,8 +23,12 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-.card {
+<style lang="postcss" >
+.post-card {
     border-radius: 24px;
+    padding: 16px;
+}
+
+#doc {
 }
 </style>

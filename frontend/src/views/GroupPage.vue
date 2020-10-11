@@ -25,7 +25,7 @@
               <img class="friends-image" src="https://i.imgur.com/VZcKVRt.png">
             </v-row>
             <v-row class="justify-center">
-              <FeedLine class="feed-line-wrapper" :feeds="myFeeds"/>
+              <FeedLine class="feed-line-wrapper" :feeds="groups_feeds[0]"/>
             </v-row>
           </v-container>
         </v-card>
@@ -37,7 +37,7 @@
               <img class="friends-image" src="https://i.imgur.com/E9LgAl4.png">
             </v-row>
             <v-row class="justify-center">
-              <FeedLine class="feed-line-wrapper" :feeds="myFeeds"/>
+              <FeedLine class="feed-line-wrapper" :feeds="groups_feeds[1]"/>
             </v-row>
           </v-container>
         </v-card>
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import feeds from '@/assets/dummy_feeds.json'
 import FeedLine from '@/components/FeedLine.vue'
 
 export default {
@@ -70,10 +71,8 @@ export default {
     groups: Array
   },
   data: () => ({
-    myFeeds: [
-      1,
-      2
-    ]
+    myFeeds: feeds.myfeeds,
+    groups_feeds: feeds.groups_feeds
   })
 }
 </script>
@@ -97,6 +96,8 @@ export default {
 
 .justify-center {
   justify-content: center;
+  overflow-y: scroll;
+  height: 75vh;
 }
 
 .plus-btn:hover {
