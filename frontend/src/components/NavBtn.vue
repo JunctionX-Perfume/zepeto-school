@@ -24,9 +24,13 @@ export default {
 
 <style scoped>
 .btn {
-  background: #C8E7FF;
-  width: 120px;
+  background: #c8e7ff;
+  width: 20%;
   height: 20px;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0.3px 0.3px 0.3px rgb(214, 214, 214);
+  margin-bottom: 0px;
 }
 
 .btn span {
@@ -36,7 +40,12 @@ export default {
 .btn:hover {
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
 .btn:active {
-  background: #C8E7FF;
+  background: #c8e7ff;
 }
 </style>
